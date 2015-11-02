@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="toDoList">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <title>My to do list</title>
+
+    <!-- Mobile Friendly -->
+    <meta name="handheldfriendly" content="true">
+    <meta name="mobileoptimized" content="240">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Scripts -->
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <!-- Css -->
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>My to do list</h1>
+    </header>
+
+    <section ng-controller="panelController as panel" ng-init="tab = 1">
+
+        <nav class="nav">
+            <a href ng-click="panel.selectTab(1)">Work</a>
+            <a href ng-click="panel.selectTab(2)">Groceries</a>
+            <a href ng-click="panel.selectTab(3)">Chores</a>
+        </nav>
+
+        <div class="panel" ng-show="panel.isSelected(1)">
+            <list ng-controller="workController as list"></list>
+        </div>
+
+        <div class="panel" ng-show="panel.isSelected(2)">
+            <list ng-controller="groceriesController as list"></list>
+        </div>
+
+        <div class="panel" ng-show="panel.isSelected(3)">
+            <list ng-controller="choresController as list"></list>
+        </div>
+
+    </section>
+</body>
+
+</html>

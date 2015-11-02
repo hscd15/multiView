@@ -1,0 +1,15 @@
+{
+    "work": [{
+        "string": "finish website"
+    }],
+    "groceries": [{
+        "string": "wine"
+    }, {
+        "string": "cherry Tomatoes"
+    }, {
+        "string": "salami"
+    }],
+    "chores": [{
+        "string": "clean house"
+    }]
+}

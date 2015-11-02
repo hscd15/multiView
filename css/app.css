@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: #EFEFEF;
+}
+
+.clearFix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+header {
+    background: #414141;
+    box-shadow: 0px 2px 10px #888888;
+    padding: 0.5rem;
+}
+
+h1 {
+    color: #B3D335;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #414141;
+}
+
+nav a,
+nav a:visited {
+    width: 33.33%;
+    float: left;
+    padding: 0.25rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #B3D335;
+}
+
+#listWrap {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+}
+
+#listWrap li {
+    background: rgba(265, 265, 265, 0.5);
+    border: 1px solid white;
+    padding: 0 0.5rem;
+}
+
+#listWrap li:first-child {
+    border-top: none;
+}
+
+p {
+    display: block;
+    width: 75%;
+    height: 100%;
+    float: left;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+form {
+    position: fixed;
+    width: 100%;
+    bottom: 2.75rem;
+}
+
+input[type="text"] {
+    width: 59%;
+    height: 40px;
+    padding-left: 0.25rem;
+    font-size: 1.25rem;
+    border: none;r
+    float: left;
+}
+
+input[type="submit"] {
+    width: 38%;
+    height: 40px;
+    border: none;
+    color: #414141;
+    font-size: 1.75rem;
+    font-family: 'Oswald', sans-serif;
+    background: #B3D335 !important;
+}
+
+button {
+    width: 15%;
+    height: 50px;
+    border: none;
+    background: none;
+    float: right;
+}
+
+button:active {
+    border: none;
+}
+
+button img {
+    height: 40%;
+    float: right;
+    padding-right: 0.25rem;
+}
+
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
+[data-state="leftHide"] {
+    left: -100%;
+    -webkit-animation: left 750ms 1 ease-in-out;
+    animation: left 750ms 1 ease-in-out;
+}
+
+@-webkit-keyframes left {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes left {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
